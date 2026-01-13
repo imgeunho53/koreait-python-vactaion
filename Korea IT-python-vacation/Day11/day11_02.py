@@ -48,3 +48,40 @@ cup1.fill(350)
 cup1.drink(50)
 cup1.check()
 
+class Player:
+    def __init__(self, _nickname, hp=100):
+        self._nickname = _nickname
+        self.hp = hp
+
+    def change_nickname(self, new_name):
+        self._nickname = new_name
+
+p1 = Player("홍길동")
+print(p1._nickname) # 객체정보에 접근
+print(p1.hp) # 객체정보에 접근
+# 필드명 앞에 '_'붙히면 직접접근할때 경고창 (작동은 함)
+# 직접 접근해서 변경까지 가능
+p1._nickname = "김길동" # 변경
+print(p1._nickname)
+
+# 동적으로 객체에 필드를 추가가능
+p1.anything = "아무거나"
+print(p1.anything)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
